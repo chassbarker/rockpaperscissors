@@ -12,18 +12,23 @@
 
 <body>
     <div class="container">
-        <h1>Rock, Paper, Scissors</h1>
-        <p>Select your choice:</p>
-        <div class="buttons">
-            <button onclick="playGame('rock')">Rock</button>
-            <button onclick="playGame('paper')">Paper</button>
-            <button onclick="playGame('scissors')">Scissors</button>
+        <div class="header">
+            <h1>🎄 Rock, Paper, Scissors 🎄</h1>
+            <p>Make your choice below!</p>
         </div>
 
-        <h2>Result</h2>
-        <p id="user-choice">Your choice: </p>
-        <p id="computer-choice">Computer's choice: </p>
-        <p id="result"></p>
+        <div class="buttons">
+            <button onclick="playGame('rock')">🎅 Rock</button>
+            <button onclick="playGame('paper')">🎁 Paper</button>
+            <button onclick="playGame('scissors')">⛸️ Scissors</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Results</h2>
+            <p id="user-choice">Your choice: </p>
+            <p id="computer-choice">Computer's choice: </p>
+            <p id="result"></p>
+        </div>
     </div>
 
     <!-- Link to the external JavaScript file -->

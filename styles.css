@@ -19,87 +19,102 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1543804081-3d2601f48dd6') no-repeat center center/cover;
+    background: linear-gradient(135deg, #ffecd2, #ff9a9e);
+    background-size: cover;
 }
 
 /* Container Styling */
 .container {
     text-align: center;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 20px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 350px;
+    max-width: 400px;
     width: 90%;
-    border: 2px solid #ff0000;
-    /* Red border for holiday cheer */
+    border: 4px solid #ff0000;
+    position: relative;
 }
 
-/* Title Styling */
+/* Header Styling */
+.header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
     color: #006400;
-    /* Dark green */
-    font-weight: 700;
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #8b0000;
+    font-size: 16px;
 }
 
 /* Button Styling */
 .buttons button {
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: 18px;
+    padding: 14px 20px;
     margin: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
     color: #ffffff;
     font-weight: 700;
+    width: 120px;
     transition: all 0.3s ease;
-    width: 100px;
 }
 
+/* Individual Button Colors */
 .buttons button:nth-child(1) {
-    background: linear-gradient(135deg, #8b0000, #b22222);
-    /* Red for Rock */
+    background: linear-gradient(135deg, #b22222, #ff6347);
+    /* Santa red */
 }
 
 .buttons button:nth-child(2) {
-    background: linear-gradient(135deg, #006400, #228b22);
-    /* Green for Paper */
+    background: linear-gradient(135deg, #2e8b57, #66cdaa);
+    /* Gift green */
 }
 
 .buttons button:nth-child(3) {
-    background: linear-gradient(135deg, #ff8c00, #ffa500);
-    /* Gold for Scissors */
+    background: linear-gradient(135deg, #ffb347, #ffd700);
+    /* Ice skates gold */
 }
 
-/* Button Hover Effect */
 .buttons button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Result Styling */
-h2 {
+/* Result Section Styling */
+.result-section {
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.result-section h2 {
     color: #8b0000;
-    /* Deep red */
-    margin-top: 25px;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
-#user-choice,
-#computer-choice,
-#result {
+.result-section p {
     font-size: 18px;
-    color: #333333;
-    margin-top: 10px;
+    color: #444444;
+    font-weight: 600;
 }
 
 /* Result Highlighting */
 #result {
+    color: #228b22;
     font-size: 20px;
+    margin-top: 10px;
     font-weight: 700;
-    color: #006400;
-    margin-top: 15px;
 }
