@@ -18,9 +18,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #e0ffff, #87cefa);
+    background: url('https://example.com/snowy-village-bg.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: white;
     overflow: hidden;
+    font-size: 18px;
 }
 
 /* Container Styling */
@@ -28,31 +30,32 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.7);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
     width: 90%;
     border: 4px solid #ff6347;
     /* Holiday red border */
     position: relative;
+    backdrop-filter: blur(8px);
 }
 
 /* Header Styling */
 .header {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #006400;
+    color: #ff6347;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 p {
-    color: #8b0000;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -62,26 +65,28 @@ p {
     justify-content: space-around;
     gap: 10px;
     margin-top: 20px;
+    z-index: 1;
 }
 
 .elf {
-    font-size: 24px;
+    font-size: 32px;
     padding: 20px;
     background-color: #fff;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    overflow: hidden;
 }
 
-/* Colors and Animations */
+/* Elf button colors and animations */
 .elf:nth-child(1) {
-    background: linear-gradient(135deg, #b22222, #ff4500);
+    background: linear-gradient(135deg, #ff6347, #ff4500);
 }
 
 .elf:nth-child(2) {
@@ -93,25 +98,24 @@ p {
 }
 
 .elf:hover {
-    transform: translateY(-10px) scale(1.1);
-    animation: bounce 0.6s ease infinite;
+    animation: spin 1s ease-out infinite;
+    transform: scale(1.2) rotate(15deg);
 }
 
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
+/* Spin Keyframes */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
 
-    50% {
-        transform: translateY(-10px);
+    100% {
+        transform: rotate(360deg);
     }
 }
 
 /* Result Section Styling */
 .result-section {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.3);
     margin-top: 20px;
     padding: 15px;
     border-radius: 12px;
@@ -119,14 +123,14 @@ p {
 }
 
 .result-section h2 {
-    color: #8b0000;
+    color: #ff6347;
     font-size: 26px;
     margin-bottom: 15px;
 }
 
 .result-section p {
     font-size: 18px;
-    color: #444444;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -137,3 +141,46 @@ p {
     margin-top: 10px;
     font-weight: 700;
 }
+
+#user-choice,
+#computer-choice {
+    margin-top: 10px;
+}
+
+/* Snow Falling Effect */
+@keyframes snowfall {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+    animation-duration: 6s;
+    opacity: 0.8;
+}
+
+.snowflake:nth-child(odd) {
+    animation-duration: 5s;
+}
+
+.snowflake:nth-child(even) {
+    animation-duration: 7s;
+}
+

@@ -1,26 +1,23 @@
-function playGame(userChoice) {
-    const choices = ["rock", "paper", "scissors"];
-    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+// Snowfall effect
+const snowflakes = document.createElement('div');
+snowflakes.classList.add('snowflakes');
+document.body.appendChild(snowflakes);
 
-    // Display user and computer choices
-    document.getElementById("user-choice").textContent = `Your choice: ${userChoice}`;
-    document.getElementById("computer-choice").textContent = `Computer's choice: ${computerChoice}`;
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.style.width = `${Math.random() * 10 + 5}px`; // Random size
+    snowflake.style.height = snowflake.style.width;
+    snowflake.style.left = `${Math.random() * 100}%`; // Random position
+    snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random speed
+    snowflakes.appendChild(snowflake);
 
-    // Determine the result
-    let result;
-    if (userChoice === computerChoice) {
-        result = "It's a tie!";
-    } else if (
-        (userChoice === "rock" && computerChoice === "scissors") ||
-        (userChoice === "scissors" && computerChoice === "paper") ||
-        (userChoice === "paper" && computerChoice === "rock")
-    ) {
-        result = "You win!";
-    } else {
-        result = "Computer wins!";
-    }
-
-    // Display the result
-    document.getElementById("result").textContent = result;
+    // Remove snowflake after it reaches the bottom
+    snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+    });
 }
+
+// Create snowflakes every 200ms
+setInterval(createSnowflake, 200);
 
