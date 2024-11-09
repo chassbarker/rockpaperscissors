@@ -1,23 +1,25 @@
-// Snowfall effect
-const snowflakes = document.createElement('div');
-snowflakes.classList.add('snowflakes');
-document.body.appendChild(snowflakes);
+function playGame(userChoice) {
+    // Generate computer's choice
+    const choices = ['rock', 'paper', 'scissors'];
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
 
-function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.style.width = `${Math.random() * 10 + 5}px`; // Random size
-    snowflake.style.height = snowflake.style.width;
-    snowflake.style.left = `${Math.random() * 100}%`; // Random position
-    snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random speed
-    snowflakes.appendChild(snowflake);
+    // Display the results
+    document.getElementById('user-choice').textContent = `Your choice: ${userChoice}`;
+    document.getElementById('computer-choice').textContent = `Computer's choice: ${computerChoice}`;
+    
+    // Determine the result
+    let result = '';
+    if (userChoice === computerChoice) {
+        result = "It's a tie!";
+    } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+        result = "You win! 🎉";
+    } else {
+        result = "You lose! 😢";
+    }
 
-    // Remove snowflake after it reaches the bottom
-    snowflake.addEventListener('animationend', () => {
-        snowflake.remove();
-    });
+    document.getElementById('result').textContent = result;
 }
-
-// Create snowflakes every 200ms
-setInterval(createSnowflake, 200);
-

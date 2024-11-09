@@ -59,8 +59,8 @@ p {
     font-size: 16px;
 }
 
-/* Elves Styling */
-.elves {
+/* Hands Styling */
+.hands {
     display: flex;
     justify-content: space-around;
     gap: 10px;
@@ -68,13 +68,13 @@ p {
     z-index: 1;
 }
 
-.elf {
-    font-size: 32px;
+.hand {
+    font-size: 48px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,32 +84,44 @@ p {
     overflow: hidden;
 }
 
-/* Elf button colors and animations */
-.elf:nth-child(1) {
-    background: linear-gradient(135deg, #ff6347, #ff4500);
+/* Hand colors */
+.rock {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
-.elf:nth-child(2) {
-    background: linear-gradient(135deg, #2e8b57, #66cdaa);
+.paper {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
-.elf:nth-child(3) {
-    background: linear-gradient(135deg, #ffb347, #ffd700);
+.scissors {
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
 }
 
-.elf:hover {
-    animation: spin 1s ease-out infinite;
-    transform: scale(1.2) rotate(15deg);
+.hand:hover {
+    animation: shake 0.5s ease-in-out;
+    transform: scale(1.2);
 }
 
-/* Spin Keyframes */
-@keyframes spin {
+/* Shake Keyframes */
+@keyframes shake {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: translateX(0);
     }
 }
 
@@ -183,4 +195,3 @@ p {
 .snowflake:nth-child(even) {
     animation-duration: 7s;
 }
-
