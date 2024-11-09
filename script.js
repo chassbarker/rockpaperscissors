@@ -23,3 +23,4 @@ function playGame(userChoice) {
     // Display the result
     document.getElementById("result").textContent = result;
 }
+

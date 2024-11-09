@@ -1,0 +1,71 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Title styling */
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:nth-child(1) {
+    background-color: #4caf50; /* Green for Rock */
+}
+
+.buttons button:nth-child(2) {
+    background-color: #2196f3; /* Blue for Paper */
+}
+
+.buttons button:nth-child(3) {
+    background-color: #ff5722; /* Orange for Scissors */
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Result styling */
+h2 {
+    color: #444444;
+    margin-top: 20px;
+}
+
+#user-choice, #computer-choice, #result {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666666;
+}
