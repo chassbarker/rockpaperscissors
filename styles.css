@@ -2,7 +2,7 @@
 body,
 h1,
 p {
-    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Mountains of Christmas', bold;
 }
 
 /* Reset */
@@ -50,6 +50,7 @@ body {
 
 h1 {
     color: #ff6347;
+    /* Red color */
     font-size: 36px;
     margin-bottom: 10px;
 }
@@ -87,14 +88,17 @@ p {
 /* Hand colors */
 .rock {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
+    /* Red tones for Rock */
 }
 
 .paper {
     background: linear-gradient(135deg, #044c22, #0a381d);
+    /* Green tones for Paper */
 }
 
 .scissors {
     background: linear-gradient(135deg, #f39c12, #f1c40f);
+    /* Yellow tones for Scissors */
 }
 
 .hand:hover {
@@ -136,6 +140,7 @@ p {
 
 .result-section h2 {
     color: #dbd41b;
+    /* Yellow for the heading */
     font-size: 26px;
     margin-bottom: 15px;
 }
@@ -148,7 +153,8 @@ p {
 
 /* Result Highlighting */
 #result {
-    color: #912707;
+    color: #228b22;
+    /* Green for result text */
     font-size: 30px;
     margin-top: 10px;
     font-weight: 700;
