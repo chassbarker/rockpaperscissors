@@ -1,6 +1,5 @@
 /* Import Google Fonts */
 body,
-button,
 h1,
 p {
     font-family: 'Mountains of Christmas', cursive;
@@ -57,87 +56,56 @@ p {
     font-size: 16px;
 }
 
-/* Button Styling */
-.buttons {
+/* Elves Styling */
+.elves {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
+    margin-top: 20px;
 }
 
-.game-button {
-    font-size: 18px;
-    padding: 14px 20px;
-    margin: 10px;
-    border: none;
+.elf {
+    font-size: 24px;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 50%;
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: 700;
     width: 100px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
 }
 
-/* Individual Button Colors */
-.game-button:nth-child(1) {
+/* Colors and Animations */
+.elf:nth-child(1) {
     background: linear-gradient(135deg, #b22222, #ff4500);
-    /* Santa red */
 }
 
-.game-button:nth-child(2) {
+.elf:nth-child(2) {
     background: linear-gradient(135deg, #2e8b57, #66cdaa);
-    /* Gift green */
 }
 
-.game-button:nth-child(3) {
+.elf:nth-child(3) {
     background: linear-gradient(135deg, #ffb347, #ffd700);
-    /* Ice skates gold */
 }
 
-/* Button Hover Animation: Spin */
-.game-button:hover {
-    animation: spin 1s ease infinite;
-    transform: scale(1.1);
+.elf:hover {
+    transform: translateY(-10px) scale(1.1);
+    animation: bounce 0.6s ease infinite;
 }
 
-/* Spin Keyframes */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg) scale(1.1);
-    }
+@keyframes bounce {
 
+    0%,
     100% {
-        transform: rotate(360deg) scale(1.1);
-    }
-}
-
-/* Shake Animation on Click */
-.game-button:active {
-    animation: shake 0.3s ease;
-}
-
-/* Shake Keyframes */
-@keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-5px);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateX(5px);
-    }
-
-    75% {
-        transform: translateX(-5px);
-    }
-
-    100% {
-        transform: translateX(0);
+        transform: translateY(-10px);
     }
 }
 
