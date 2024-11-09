@@ -19,8 +19,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ffecd2, #ff9a9e);
+    background: linear-gradient(135deg, #e0ffff, #87cefa);
     background-size: cover;
+    overflow: hidden;
 }
 
 /* Container Styling */
@@ -28,25 +29,26 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 90%;
-    border: 4px solid #ff0000;
+    border: 4px solid #ff6347;
+    /* Holiday red border */
     position: relative;
 }
 
 /* Header Styling */
 .header {
-    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #006400;
-    font-size: 34px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
@@ -56,38 +58,87 @@ p {
 }
 
 /* Button Styling */
-.buttons button {
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.game-button {
     font-size: 18px;
     padding: 14px 20px;
     margin: 10px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     cursor: pointer;
     color: #ffffff;
     font-weight: 700;
-    width: 120px;
+    width: 100px;
+    height: 100px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Individual Button Colors */
-.buttons button:nth-child(1) {
-    background: linear-gradient(135deg, #b22222, #ff6347);
+.game-button:nth-child(1) {
+    background: linear-gradient(135deg, #b22222, #ff4500);
     /* Santa red */
 }
 
-.buttons button:nth-child(2) {
+.game-button:nth-child(2) {
     background: linear-gradient(135deg, #2e8b57, #66cdaa);
     /* Gift green */
 }
 
-.buttons button:nth-child(3) {
+.game-button:nth-child(3) {
     background: linear-gradient(135deg, #ffb347, #ffd700);
     /* Ice skates gold */
 }
 
-.buttons button:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Button Hover Animation: Spin */
+.game-button:hover {
+    animation: spin 1s ease infinite;
+    transform: scale(1.1);
+}
+
+/* Spin Keyframes */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+/* Shake Animation on Click */
+.game-button:active {
+    animation: shake 0.3s ease;
+}
+
+/* Shake Keyframes */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* Result Section Styling */
