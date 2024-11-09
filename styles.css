@@ -90,7 +90,7 @@ p {
 }
 
 .paper {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    background: linear-gradient(135deg, #044c22, #0a381d);
 }
 
 .scissors {
@@ -148,7 +148,7 @@ p {
 
 /* Result Highlighting */
 #result {
-    color: #228b22;
+    color: #49f149;
     font-size: 20px;
     margin-top: 10px;
     font-weight: 700;
