@@ -127,7 +127,7 @@ p {
 
 /* Result Section Styling */
 .result-section {
-    background: #f7f2f2ab;
+    background: #701fbdab;
     margin-top: 20px;
     padding: 15px;
     border-radius: 12px;
@@ -135,7 +135,7 @@ p {
 }
 
 .result-section h2 {
-    color: #03281d;
+    color: #dbd41b;
     font-size: 26px;
     margin-bottom: 15px;
 }
