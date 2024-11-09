@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors Game</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <p>Select your choice:</p>
-    <button onclick="playGame('rock')">Rock</button>
-    <button onclick="playGame('paper')">Paper</button>
-    <button onclick="playGame('scissors')">Scissors</button>
+    <div class="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Select your choice:</p>
+        <div class="buttons">
+            <button onclick="playGame('rock')">Rock</button>
+            <button onclick="playGame('paper')">Paper</button>
+            <button onclick="playGame('scissors')">Scissors</button>
+        </div>
 
-    <h2>Result</h2>
-    <p id="user-choice">Your choice: </p>
-    <p id="computer-choice">Computer's choice: </p>
-    <p id="result"></p>
+        <h2>Result</h2>
+        <p id="user-choice">Your choice: </p>
+        <p id="computer-choice">Computer's choice: </p>
+        <p id="result"></p>
+    </div>
 
     <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 
 </html>
-

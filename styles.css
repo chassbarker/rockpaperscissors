@@ -1,71 +1,102 @@
-/* Basic reset */
+/* Import Google Fonts */
+body,
+button,
+h1,
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Container styling */
+/* Body Styling */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
 }
 
+/* Container Styling */
 .container {
     text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 90%;
 }
 
-/* Title styling */
+/* Title Styling */
 h1 {
     color: #333333;
+    font-weight: 600;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-/* Button styling */
+/* Button Styling */
 .buttons button {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     color: #ffffff;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100px;
 }
 
 .buttons button:nth-child(1) {
-    background-color: #4caf50; /* Green for Rock */
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    /* Green for Rock */
 }
 
 .buttons button:nth-child(2) {
-    background-color: #2196f3; /* Blue for Paper */
+    background: linear-gradient(135deg, #2196f3, #64b5f6);
+    /* Blue for Paper */
 }
 
 .buttons button:nth-child(3) {
-    background-color: #ff5722; /* Orange for Scissors */
+    background: linear-gradient(135deg, #ff5722, #ff8a65);
+    /* Orange for Scissors */
 }
 
+/* Button Hover Effect */
 .buttons button:hover {
-    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Result styling */
+/* Result Styling */
 h2 {
     color: #444444;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
-#user-choice, #computer-choice, #result {
+#user-choice,
+#computer-choice,
+#result {
     font-size: 16px;
-    margin-top: 10px;
     color: #666666;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+/* Result Highlighting */
+#result {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff5722;
+    margin-top: 15px;
 }
