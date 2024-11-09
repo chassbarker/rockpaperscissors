@@ -127,7 +127,7 @@ p {
 
 /* Result Section Styling */
 .result-section {
-    background: #343232ab;
+    background: hsla(0, 1%, 17%, 0.671);
     margin-top: 20px;
     padding: 15px;
     border-radius: 12px;
